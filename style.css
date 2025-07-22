@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#currDate {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px #000;
+}
+
+input {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 30px;
+    border: 2px solid #ffeb3b;
+    text-align: center;
+    outline: none;
+    width: 80%;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #fff176;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffeb3b;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #6a1b9a;
+    transform: scale(1.05);
+}
+
+#displayAge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    /* width: 100%; */
+    max-width: 600px;
+    height: 200px;
+    border-radius: 30px;
+    margin-top: 2rem;
+    visibility: hidden;
+    text-align: center;
+    animation: slideUp 1s ease-in-out;
+}
+
+#age {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    #currDate {
+        font-size: 2rem;
+    }
+
+    #age {
+        font-size: 2rem;
+    }
+
+    input, button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    #displayAge {
+        height: 100vh;
+        padding: 1rem;
+    }
+}
