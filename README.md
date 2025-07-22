@@ -12,6 +12,11 @@ A simple and interactive web app that calculates your age based on your date of 
 - 💡 Shows friendly error messages for invalid input
 - 💻 Responsive design with clean, minimal UI
 
+---
+
+## 📸 Live Preview
+
+👉 [Live Demo](https://titiksha95.github.io/AgeCalculator/)  
 
 ---
 
